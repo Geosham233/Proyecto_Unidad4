@@ -1,0 +1,32 @@
+@media screen and (max-width: 430px) {
+  .contenedor_navegacion {
+    flex-direction: column;
+  }
+  .section_menu {
+    width: 90%;
+    justify-content: space-between;
+  }
+  nav {
+    display: none;
+  }
+  nav ul {
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+  .fa-bars {
+    display: flex;
+  }
+  .caption {
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    border: 2px #fff dotted;
+  }
+  .caption h1 {
+    font-size: 28px;
+  }
+  .caption p {
+    font-size: 15px;
+  }
+}

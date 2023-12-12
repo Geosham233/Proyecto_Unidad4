@@ -1,0 +1,213 @@
+/* FONTS */
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;700&family=Quicksand:wght@300;400;500;600;700&display=swap");
+/* END FONTS */
+
+:root {
+  --Tipografia1: "Comfortaa", sans-serif;
+  --Tipografia2: "Quicksand", sans-serif;
+  --ColorBase: #6387f2;
+  --ColorBasetrans: #6387f262;
+  --ColorSec: #7685b3;
+  --ColorCom: #f2cb63;
+  --AzulBajo: #c3d0fa;
+  --light: 300;
+  --Normal: 400;
+  --Normal2: 500;
+  --SemiBold: 600;
+  --Bold: 700;
+  --Desktop: 1200px;
+  --Movil: 430px;
+}
+/* Reset de estilos */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+/* Estilos generales del cuerpo del documento */
+body {
+  font-family: var(--Tipografia1);
+  font-size: 16px;
+  line-height: 24px;
+  color: #333;
+}
+/* Clase para establecer un ancho máximo y centrar el contenido */
+.ancho {
+  max-width: var(--Desktop);
+  margin: auto;
+  border: 1px red solid;
+}
+header {
+  background-color: var(--ColorBasetrans);
+}
+/* MENU  */
+.contenedor_navegacion {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.section_menu {
+  padding: 10px 0px;
+  display: flex;
+  flex-direction: row;
+
+  align-items: center;
+  font-family: var(--Tipografia2);
+  color: var(--ColorBase);
+}
+.logo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.fa-bars {
+  font-size: 30px;
+  cursor: pointer;
+  display: none;
+}
+nav ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  list-style: none;
+}
+nav ul li:nth-child(7) {
+  border: 1px var(--ColorCom) solid;
+  padding: 10px 20px;
+  background-color: var(--ColorCom);
+}
+nav ul li:nth-child(7):hover {
+  background-color: #fff;
+  border: 1px #fff solid;
+}
+nav ul li a {
+  font-weight: var(--Bold);
+  text-decoration: none;
+  color: var(--ColorBase);
+}
+nav ul li a:hover {
+  color: var(--ColorCom);
+}
+
+.rslides {
+  position: relative;
+  list-style: none;
+  overflow: hidden;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.rslides li {
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  position: absolute;
+  display: none;
+  width: 100%;
+  left: 0;
+  top: 0;
+}
+
+.rslides li:first-child {
+  position: relative;
+  display: block;
+  float: left;
+}
+
+.rslides img {
+  display: block;
+  height: 755px;
+  object-fit: cover;
+  float: left;
+  width: 100%;
+  border: 0;
+}
+
+/*  fin */
+
+.callbacks1_container {
+  position: relative;
+  margin: auto;
+}
+.callbacks1_container img {
+  height: 500px;
+  object-fit: cover;
+}
+.callbacks1_container ul {
+  margin: 0px;
+}
+
+.caption {
+  position: absolute;
+  z-index: 2;
+  left: 30%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  width: 35%;
+  padding: 20px;
+  border: 5px #fff dotted;
+  background-color: var(--ColorBasetrans);
+  border-radius: 3px;
+}
+.caption h1 {
+  text-align: center;
+  color: #fff;
+  padding: 20px;
+  width: 100%;
+  line-height: 42px;
+  font-family: var(--Tipografia2);
+  font-size: 35px;
+  font-weight: var(--Bold);
+}
+.caption p {
+  width: 400px;
+  font-size: 20px;
+  line-height: 32px;
+  color: #fff;
+  text-align: center;
+}
+.caption a {
+  display: inline-block;
+  color: #fff;
+  background-color: var(--ColorBase);
+  padding: 15px 40px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+}
+.callbacks1_nav {
+  position: absolute;
+  top: 50%;
+  left: 5%;
+  opacity: 0.4;
+  z-index: 2;
+  text-indent: -9999px;
+  overflow: hidden;
+  text-decoration: none;
+  height: 63px;
+  width: 40px;
+  background: transparent url("../imagenes_comp/themes.gif") no-repeat left top;
+}
+.callbacks1_nav:active {
+  opacity: 0.8;
+}
+.callbacks1_nav.next {
+  left: 90%;
+  background-position: right top;
+  /* right: 50px; */
+}
+/* SERVICIOS */
+.fondo_servicios {
+  background-color: var(--AzulBajo);
+}
+.contenedor_servicios {
+  text-align: center;
+}

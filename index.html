@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cirugia Plastica</title>
+    <link rel="stylesheet" href="styles/style.css" />
+    <link rel="stylesheet" href="styles/movil.css" />
+    <link rel="stylesheet" href="styles/carrousel.css" />
+    <link rel="stylesheet" href="styles/animate.css" />
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script
+      src="https://kit.fontawesome.com/229e96b656.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- FUNCIONES RESPONSIVE SLIDE -->
+    <script src="scripts/responsiveslides.min.js"></script>
+    <script>
+      $(function () {
+        $("#slider").responsiveSlides({
+          auto: false,
+          pager: false,
+          nav: true,
+          speed: 500,
+          namespace: "callbacks1",
+          before: function () {
+            $(".events").append("<li>before event fired.</li>");
+          },
+          after: function () {
+            $(".events").append("<li>after event fired.</li>");
+          },
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <header>
+      <section class="contenedor_navegacion ancho">
+        <div class="section_menu">
+          <figure class="logo">
+            <img src="images/plastic-surgery.png" alt="" />
+            <h2>AesthetiCraft</h2>
+          </figure>
+
+          <i id="iconomenu" class="fa-solid fa-bars"></i>
+        </div>
+        <nav id="menu">
+          <ul>
+            <li><a href="#">Inicio</a></li>
+            <li><a href="#">Servicios</a></li>
+            <li><a href="#">Certificados</a></li>
+            <li><a href="#">Testimonios</a></li>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">Contáctanos</a></li>
+            <li><a href="#">Haz tu cita</a></li>
+          </ul>
+        </nav>
+      </section>
+    </header>
+    <div class="callbacks_container">
+      <ul class="rslides" id="slider">
+        <li>
+          <img src="imagenes_comp/slide1_11.png" alt="" />
+          <div class="caption">
+            <h1>Expert Financial Advice</h1>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima et
+              labore magni veritatis, amet eligendi ut facilis voluptatem eos
+              at.
+            </p>
+            <a id="abrirbtn" href="#">Learn More</a>
+          </div>
+        </li>
+        <li>
+          <img
+            src="imagenes_comp/slide2.jpg"
+            alt="medico-marcando-cara-pacientes-femeninos-tratamiento-cosmetico"
+          />
+          <div class="caption">
+            <h1>Expert Financial Advice</h1>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima et
+              labore magni veritatis, amet eligendi ut facilis voluptatem eos
+              at.
+            </p>
+            <a id="abrirbtn" href="#">Learn More</a>
+          </div>
+        </li>
+        <li>
+          <img
+            src="imagenes_comp/slide3.jpg"
+            alt="mujer-cara-marcada-recibiendo-inyeccion-botox"
+          />
+          <div class="caption">
+            <h1>Expert Financial Advice</h1>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima et
+              labore magni veritatis, amet eligendi ut facilis voluptatem eos
+              at.
+            </p>
+            <a id="abrirbtn" href="#">Learn More</a>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <div style="background: #c3d0fa; height: 150px; overflow: hidden">
+      <svg
+        viewBox="0 0 500 150"
+        preserveAspectRatio="none"
+        style="z-index: 5; height: 100%; width: 100%"
+      >
+        <path
+          d="M0.00,49.98 C149.99,150.00 283.29,0.52 500.00,49.98 L500.00,0.00 L0.00,0.00 Z"
+          style="stroke: none; fill: #6387f2"
+        ></path>
+      </svg>
+    </div>
+    <section class="fondo_servicios">
+      <div class="contenedor_servicios ancho">
+        <h1>Servicios</h1>
+        <article></article>
+        <article></article>
+        <article></article>
+      </div>
+    </section>
+
+    <!-- FUNCIONES JS -->
+    <script>
+      $("#iconomenu").click(function () {
+        $("#menu").slideToggle();
+      });
+      $("#titulo").click(function () {
+        $("#parrafo").slideToggle();
+      });
+    </script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
+</html>
