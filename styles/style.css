@@ -36,7 +36,6 @@ body {
 .ancho {
   max-width: var(--Desktop);
   margin: auto;
-  border: 1px red solid;
 }
 header {
   background-color: var(--ColorBasetrans);

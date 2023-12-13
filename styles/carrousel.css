@@ -25,7 +25,6 @@
   position: relative;
   min-width: 33.33%;
   text-align: center;
-  border: 1px red solid;
   background-color: var(--ColorBasetrans);
 }
 .slide ul li {
