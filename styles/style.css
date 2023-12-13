@@ -91,6 +91,46 @@ nav ul li a {
 nav ul li a:hover {
   color: var(--ColorCom);
 }
+/* MODAL */
+.fondomodal {
+  display: none;
+  padding: 100px 10px;
+  position: fixed;
+  z-index: 20;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  transition: all 0.5s;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.contenidomodal {
+  background-color: var(--ColorBase);
+  border-radius: 8px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 400px;
+  padding: 15px 20px 30px 20px;
+}
+.imgmodal1 {
+  width: 300px;
+}
+.imgmodal2 {
+  width: 300px;
+}
+.fa-circle-xmark {
+  color: #fff;
+  border: 1px red solid;
+  background-color: red;
+}
+.contenidomodal p {
+  color: #fff;
+  /* font-size: 50px; */
+}
+/* FIN MODAL */
 
 .rslides {
   position: relative;
@@ -168,11 +208,10 @@ nav ul li a:hover {
   font-weight: var(--Bold);
 }
 .caption p {
-  width: 400px;
-  font-size: 20px;
-  line-height: 32px;
+  width: 500px;
+  font-size: 18px;
+  line-height: 26px;
   color: #fff;
-  text-align: center;
 }
 .caption a {
   display: inline-block;
@@ -210,4 +249,18 @@ nav ul li a:hover {
 }
 .contenedor_servicios {
   text-align: center;
+  color: var(--ColorBase);
+}
+.contenedor_servicios h1 {
+  font-size: 35px;
+  padding: 40px 0px;
+}
+
+/* CARRUSEL */
+.slide figure img {
+  width: 100%;
+}
+.slide h1 {
+  font-size: 35px;
+  line-height: 43px;
 }

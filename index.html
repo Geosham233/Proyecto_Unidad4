@@ -52,23 +52,44 @@
             <li><a href="#">Testimonios</a></li>
             <li><a href="#">FAQ</a></li>
             <li><a href="#">Contáctanos</a></li>
-            <li><a href="#">Haz tu cita</a></li>
+            <li><a id="abrirbtn" href="#">Haz tu cita</a></li>
           </ul>
         </nav>
       </section>
     </header>
+    <section id="modal" class="fondomodal">
+      <div class="contenidomodal">
+        <div class="btnmodal">
+          <a href="#" id="cerrarbtn">
+            <i class="fa-solid fa-circle-xmark"></i>
+          </a>
+        </div>
+        <img class="imgmodal1" src="imagenes/logo.jpg" alt="" />
+        <img class="imgmodal2" src="imagenes/fotomodal.jpg" alt="" />
+        <p>
+          Somos la empresa Financiera que necesitas, ven y acercate a nosotros
+          para que tu empresa crezca.
+        </p>
+      </div>
+    </section>
     <div class="callbacks_container">
       <ul class="rslides" id="slider">
         <li>
           <img src="imagenes_comp/slide1_11.png" alt="" />
           <div class="caption">
-            <h1>Expert Financial Advice</h1>
+            <h1>
+              Bienvenido a AesthetiCraft - Donde la Transformación Crea Belleza
+              Única
+            </h1>
+            <h3>
+              Explora procedimientos diseñados para realzar tu belleza natural y
+              restaurar tu confianza. Cada historia de transformación es única.
+            </h3>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima et
-              labore magni veritatis, amet eligendi ut facilis voluptatem eos
-              at.
+              Desde rinoplastias elegantes hasta reconstrucciones que inspiran.
+              Descubre cómo podemos ayudarte a alcanzar tus metas estéticas.
             </p>
-            <a id="abrirbtn" href="#">Learn More</a>
+            <a id="btn_servicios" href="#">Explorar Servicios</a>
           </div>
         </li>
         <li>
@@ -116,11 +137,99 @@
       </svg>
     </div>
     <section class="fondo_servicios">
-      <div class="contenedor_servicios ancho">
-        <h1>Servicios</h1>
-        <article></article>
-        <article></article>
-        <article></article>
+      <section id="last" class="contenedor_servicios ancho">
+        <article class="our_team">
+          <h1>Servicios</h1>
+        </article>
+        <section id="carousel" class="contenedor_titulo">
+          <div id="slide-container">
+            <article class="slide" data-slideIndex="0">
+              <figure>
+                <img
+                  src="imagenes_comp/doctor-examinando-pacientes-femeninos-tratamiento-cosmetico.jpg"
+                  alt=""
+                />
+              </figure>
+              <h1>Cirugía Estética Facial</h1>
+              <ul>
+                <li>Rinoplastia (cirugía de la nariz).</li>
+                <li>Blefaroplastia (cirugía de párpados).</li>
+                <li>Ritidectomía (lifting facial).</li>
+                <li>Cirugía de mentón.</li>
+                <li>Otoplastia (cirugía de las orejas).</li>
+              </ul>
+            </article>
+            <article class="slide" data-slideIndex="1">
+              <figure>
+                <img src="imagenes_comp/cirugia-mamas.jpg" alt="" />
+              </figure>
+              <h1>Cirugía de Mama</h1>
+              <ul>
+                <li>Aumento mamario.</li>
+                <li>Reducción mamaria.</li>
+                <li>Levantamiento de senos (mastopexia).</li>
+                <li>Reconstrucción mamaria.</li>
+              </ul>
+            </article>
+            <article class="slide" data-slideIndex="2">
+              <figure>
+                <img src="imagenes_comp/cirugia_corporal.jpg" alt="" />
+              </figure>
+              <h1>Cirugía Corporal</h1>
+              <ul>
+                <li>Liposucción.</li>
+                <li>Abdominoplastia (cirugía de abdomen).</li>
+                <li>Gluteoplastia (cirugía de glúteos).</li>
+                <li>Lifting de muslos o brazos.</li>
+                <li>Contorno corporal después de pérdida de peso masiva.</li>
+              </ul>
+            </article>
+            <article class="slide" data-slideIndex="3">
+              <figure>
+                <img
+                  src="imagenes_comp/esteticista-haciendo-relleno-inyeccion-clienta.jpg"
+                  alt=""
+                />
+              </figure>
+              <h1>Procedimientos No Quirúrgicos</h1>
+              <ul>
+                <li>Inyecciones de Botox y rellenos dérmicos.</li>
+                <li>Tratamientos láser para rejuvenecimiento facial.</li>
+                <li>Peelings químicos.</li>
+                <li>Tratamientos de microdermoabrasión.</li>
+              </ul>
+            </article>
+            <article class="slide" data-slideIndex="4">
+              <figure>
+                <img src="imagenes_comp/cirugia.jpg" alt="" />
+              </figure>
+              <h1>Cirugía Reconstructiva</h1>
+              <ul>
+                <li>Reconstrucción después de traumatismos o lesiones.</li>
+                <li>Cirugía de reconstrucción mamaria post-mastectomía.</li>
+                <li>Corrección de defectos congénitos.</li>
+              </ul>
+            </article>
+            <article class="slide" data-slideIndex="5">
+              <figure>
+                <img src="imagenes_comp/cirugia_hombre.jpg" alt="" />
+              </figure>
+              <h1>Cirugía Masculina</h1>
+              <ul>
+                <li>Ginecomastia (reducción de senos masculinos).</li>
+                <li>Liposucción y contorno corporal.</li>
+              </ul>
+            </article>
+          </div>
+        </section>
+      </section>
+      <div class="slide-buttons">
+        <a href="#last" id="back-button" class="arrow back"
+          ><i class="fa-solid fa-arrow-left"></i
+        ></a>
+        <a href="#last" id="forward-button" class="arrow forward"
+          ><i class="fa-solid fa-arrow-right"></i
+        ></a>
       </div>
     </section>
 
@@ -141,5 +250,24 @@
       nomodule
       src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
     ></script>
+    <script src="scripts/carrousel.js"></script>
+    <!-- MODAL -->
+    <script>
+      var fondo = document.getElementById("modal");
+      $("#abrirbtn").click(function () {
+        fondo.style.display = "flex";
+      });
+
+      $("#cerrarbtn").click(function () {
+        fondo.style.display = "none";
+      });
+
+      window.onclick = function (event) {
+        if (event.target == fondo) {
+          fondo.style.display = "none";
+        }
+      };
+    </script>
+    <!-- FIN MODAL -->
   </body>
 </html>

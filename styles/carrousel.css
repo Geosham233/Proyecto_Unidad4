@@ -24,7 +24,7 @@
   padding: 20px;
   scroll-snap-align: center;
   position: relative;
-  min-width: 100%;
+  min-width: 33.33%;
   text-align: center;
 }
 /* contenedor botones */
@@ -67,4 +67,9 @@
   text-decoration: none;
   cursor: pointer;
   padding: 10px;
+}
+@media screen and (max-width: 430px) {
+  .slide {
+    min-width: 100%;
+  }
 }
