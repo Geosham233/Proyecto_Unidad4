@@ -13,7 +13,7 @@
     flex-direction: column;
     flex-wrap: wrap;
   }
-  .fa-bars {
+  .icono_menu {
     display: flex;
   }
   .caption {

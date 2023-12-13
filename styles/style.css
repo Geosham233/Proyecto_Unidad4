@@ -64,6 +64,8 @@ header {
 .fa-bars {
   font-size: 30px;
   cursor: pointer;
+}
+.icono_menu {
   display: none;
 }
 nav ul {
