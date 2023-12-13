@@ -34,10 +34,13 @@
     width: 100px;
   }
   .doctor {
-    gap: 10px;
+    top: 40%;
+    gap: 5px;
+    flex-wrap: wrap;
   }
   .doctor h2 {
-    font-size: 35px;
+    font-size: 45px;
+    clip-path: polygon(0% 0%, 100% 0, 100% 75%, 50% 100%, 0 75%);
   }
   /* FIN PARALLAX */
 }

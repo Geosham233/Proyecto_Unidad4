@@ -32,6 +32,12 @@
         });
       });
     </script>
+    <!-- FUNCIONES FANCYBOX -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
   </head>
   <body>
     <header>
@@ -47,8 +53,8 @@
         <nav id="menu">
           <ul>
             <li><a href="#">Inicio</a></li>
-            <li><a href="#">Servicios</a></li>
-            <li><a href="#">Certificados</a></li>
+            <li><a href="#last">Servicios</a></li>
+            <li><a href="#">Galeria</a></li>
             <li><a href="#">Testimonios</a></li>
             <li><a href="#">FAQ</a></li>
             <li><a href="#">Contáctanos</a></li>
@@ -243,16 +249,195 @@
       <figure>
         <img class="img_blur" src="imagenes_comp/parallax1.jpg" alt="" />
         <div class="doctor">
-          <h2>Certificados</h2>
+          <h2>Galeria</h2>
           <img class="img_doctor" src="imagenes_comp/doctor_blur.png" alt="" />
         </div>
       </figure>
     </section>
     <!-- FIN PARALLAX -->
     <!-- LIGHTBOX -->
-
+    <section class="contenedor_seccion ancho">
+      <a
+        data-fancybox="gallery"
+        data-src="imagenes_comp/gallery-01-370x240.jpg"
+        data-caption="FOTO 1- Tratamiento no quirúrgico"
+      >
+        <figure>
+          <img
+            class="fotos"
+            src="imagenes_comp/gallery-01-370x240.jpg"
+            alt=""
+          />
+        </figure>
+      </a>
+      <a
+        data-fancybox="gallery"
+        data-src="imagenes_comp/gallery-02-370x240.jpg"
+        data-caption="FOTO 2- Cirugía en la cara"
+      >
+        <figure>
+          <img
+            class="fotos"
+            src="imagenes_comp/gallery-02-370x240.jpg"
+            alt=""
+          />
+        </figure>
+      </a>
+      <a
+        data-fancybox="gallery"
+        data-src="imagenes_comp/gallery-03-370x240.jpg"
+        data-caption="FOTO 3- Tratamiento no quirúrgico"
+      >
+        <figure>
+          <img
+            class="fotos"
+            src="imagenes_comp/gallery-03-370x240.jpg"
+            alt=""
+          />
+        </figure>
+      </a>
+      <a
+        data-fancybox="gallery"
+        data-src="imagenes_comp/gallery-04-370x240.jpg"
+        data-caption="FOTO 4- Resultados"
+      >
+        <figure>
+          <img
+            class="fotos"
+            src="imagenes_comp/gallery-04-370x240.jpg"
+            alt=""
+          />
+        </figure>
+      </a>
+      <a
+        data-fancybox="gallery"
+        data-src="imagenes_comp/gallery-05-370x240.jpg"
+        data-caption="FOTO 5- Cirgía corporal"
+      >
+        <figure>
+          <img
+            class="fotos"
+            src="imagenes_comp/gallery-05-370x240.jpg"
+            alt=""
+          />
+        </figure>
+      </a>
+      <a
+        data-fancybox="gallery"
+        data-src="imagenes_comp/gallery-06-370x240.jpg"
+        data-caption="FOTO 6 GALERIA"
+      >
+        <figure>
+          <img
+            class="fotos"
+            src="imagenes_comp/gallery-06-370x240.jpg"
+            alt=""
+          />
+        </figure>
+      </a>
+      <a
+        data-fancybox="gallery"
+        data-src="imagenes_comp/gallery-07-370x240.jpg"
+        data-caption="FOTO 7 GALERIA"
+      >
+        <figure>
+          <img
+            class="fotos"
+            src="imagenes_comp/gallery-07-370x240.jpg"
+            alt=""
+          />
+        </figure>
+      </a>
+      <a
+        data-fancybox="gallery"
+        data-src="imagenes_comp/gallery-08-370x240.jpg"
+        data-caption="FOTO 8 GALERIA"
+      >
+        <figure>
+          <img
+            class="fotos"
+            src="imagenes_comp/gallery-08-370x240.jpg"
+            alt=""
+          />
+        </figure>
+      </a>
+      <a
+        data-fancybox="gallery"
+        data-src="imagenes_comp/gallery-09-370x240.jpg"
+        data-caption="FOTO 9 GALERIA"
+      >
+        <figure>
+          <img
+            class="fotos"
+            src="imagenes_comp/gallery-09-370x240.jpg"
+            alt=""
+          />
+        </figure>
+      </a>
+    </section>
     <!-- FIN LIGHTBOX -->
-
+    <!-- PARALLAX -->
+    <section class="contenedor_parallax">
+      <figure>
+        <img
+          class="img_blur"
+          src="imagenes_comp/esteticista-haciendo-relleno-inyeccion-clienta.jpg"
+          alt=""
+        />
+        <div class="doctor">
+          <h2>Testimonios</h2>
+          <img
+            class="img_doctor"
+            src="imagenes_comp/cirugia-estetica-facial.png"
+            alt=""
+          />
+        </div>
+      </figure>
+    </section>
+    <!-- FIN PARALLAX -->
+    <!-- TESTIMONIOS -->
+    <section class="fondo_servicios">
+      <section class="contenedor_testimonios ancho">
+        <article class="testimonios">
+          <i class="fa-solid fa-user"></i>
+          <h1>María G.</h1>
+          <h2>Transformación Después de la Maternidad</h2>
+          <p>
+            "Estoy asombrada por el increíble trabajo del equipo de
+            AesthetiCraft. Después de la maternidad, mi cuerpo cambió de manera
+            que no esperaba. Gracias a la cirugía plástica, he recuperado mi
+            confianza y me siento más hermosa que nunca. El proceso fue más allá
+            de lo físico; fue una transformación emocional que agradezco
+            profundamente."
+          </p>
+        </article>
+        <article class="testimonios">
+          <i class="fa-solid fa-user"></i>
+          <h1>Juan M.</h1>
+          <h2>Reconstrucción Después de un Accidente</h2>
+          <p>
+            "Después de un accidente devastador, la reconstrucción facial que
+            realizó el Dr. Jorge Chi fue un verdadero milagro. No solo restauró
+            mi apariencia, sino que también me brindó esperanza y una nueva
+            perspectiva. El nivel de atención y profesionalismo en AesthetiCraft
+            es incomparable. ¡Gracias por devolverme la vida!"
+          </p>
+        </article>
+        <article class="testimonios">
+          <i class="fa-solid fa-user"></i>
+          <h1>Laura S.</h1>
+          <h2>Cambio de Vida con un Lifting Facial</h2>
+          <p>
+            "Decidí hacerme un lifting facial en AesthetiCraft, y ha sido la
+            mejor decisión que he tomado. La atención personalizada y la
+            destreza del cirujano fueron excepcionales. Me siento fresca,
+            renovada y más joven. Mi experiencia fue tan positiva que he
+            recomendado AesthetiCraft a todos mis amigos y familiares."
+          </p>
+        </article>
+      </section>
+    </section>
+    <!-- FIN TESTIMONIOS -->
     <!-- FUNCIONES JS -->
     <script>
       $("#iconomenu").click(function () {
@@ -289,5 +474,10 @@
       };
     </script>
     <!-- FIN MODAL -->
+    <!-- FANCYBOX -->
+    <script>
+      Fancybox.bind('[data-fancybox="gallery"]', {});
+    </script>
+    <!-- FIN FANCYBOX -->
   </body>
 </html>

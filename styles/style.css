@@ -295,13 +295,80 @@ nav ul li a:hover {
   border: 1px red solid;
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
   justify-content: center;
-  gap: 400px;
+  gap: 550px;
   align-items: center;
 }
 .doctor h2 {
   font-size: 55px;
   color: #fff;
   font-weight: var(--Bold);
+  padding: 50px;
+  clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);
+  background-color: var(--ColorBase);
+}
+/* FANCYBOX */
+.contenedor_seccion {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+.contenedor_seccion a {
+  filter: brightness(1);
+  transition: all 0.5s;
+}
+.contenedor_seccion a:hover {
+  filter: brightness(0.5);
+}
+.fotos {
+  width: 350px;
+  height: 350px;
+  object-fit: cover;
+  transition: 1s;
+  cursor: pointer;
+}
+.fotos :hover {
+  filter: blur(1);
+}
+
+.contenedor_testimonios {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  gap: 40px;
+  flex-wrap: wrap;
+  padding: 50px 0px;
+}
+.testimonios {
+  width: 360px;
+  text-align: center;
+  padding: 30px;
+  border: 3px #fff dotted;
+  box-shadow: 5px 20px 20px 0 #333;
+  border-radius: 10px;
+}
+.testimonios i {
+  font-size: 40px;
+  padding: 10px 0px;
+}
+.testimonios h1 {
+  font-size: 35px;
+  line-height: 43px;
+  color: #fff;
+  padding: 10px 0px;
+}
+.testimonios h2 {
+  font-size: 22px;
+  line-height: 30px;
+  color: #fff;
+  padding: 10px 0px;
+}
+.testimonios p {
+  font-size: 15px;
+  line-height: 23px;
+  color: var(--ColorSec);
+  padding: 10px 0px;
 }
