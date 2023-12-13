@@ -30,17 +30,37 @@
     font-size: 15px;
   }
   /* PARALLAX */
+  .contenido {
+    top: 49%;
+  }
   .img_doctor {
-    width: 100px;
+    width: 130px;
+    filter: grayscale(0);
   }
-  .doctor {
-    top: 40%;
-    gap: 5px;
-    flex-wrap: wrap;
-  }
-  .doctor h2 {
+  .contenido h2 {
     font-size: 45px;
     clip-path: polygon(0% 0%, 100% 0, 100% 75%, 50% 100%, 0 75%);
   }
+  form {
+    width: 100%;
+  }
+  .contenedor_contactanos {
+    width: 90%;
+  }
   /* FIN PARALLAX */
+  .logo_footer {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .logo_red {
+    flex-wrap: wrap;
+  }
+  .redes h2 {
+    font-size: 15px;
+  }
+  footer article {
+    font-size: 12px;
+    line-height: 18px;
+  }
 }

@@ -39,8 +39,14 @@
     />
     <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
   </head>
+  <!-- ANIMACIONES  -->
+  <script src="scripts/wow.min.js"></script>
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
   <body>
-    <header>
+    <header id="inicio">
       <section class="contenedor_navegacion ancho">
         <div class="section_menu">
           <figure class="logo">
@@ -54,10 +60,10 @@
           <ul>
             <li><a href="#">Inicio</a></li>
             <li><a href="#last">Servicios</a></li>
-            <li><a href="#">Galeria</a></li>
-            <li><a href="#">Testimonios</a></li>
-            <li><a href="#">FAQ</a></li>
-            <li><a href="#">Contáctanos</a></li>
+            <li><a href="#galeria">Galeria</a></li>
+            <li><a href="#testimonios">Testimonios</a></li>
+            <li><a href="#faq">FAQ</a></li>
+            <li><a href="#contactanos">Contáctanos</a></li>
             <li><a id="abrirbtn" href="#">Haz tu cita</a></li>
           </ul>
         </nav>
@@ -71,11 +77,21 @@
             <i class="fa-solid fa-circle-xmark"></i>
           </a>
         </div>
-        <img class="imgmodal1" src="imagenes/logo.jpg" alt="" />
-        <p>
-          Somos la empresa Financiera que necesitas, ven y acercate a nosotros
-          para que tu empresa crezca.
-        </p>
+        <img class="imgmodal" src="imagenes_comp/doctor_blur.png" alt="" />
+        <form id="myForm">
+          <label for="firstName">Nombre:</label>
+          <input type="text" id="firstName" name="firstName" required>
+        
+          <label for="lastName">Apellido:</label>
+          <input type="text" id="lastName" name="lastName" required>
+        
+          <label for="email">Correo Electrónico:</label>
+          <input type="email" id="email" name="email" required>
+          <label for="comentary">Razón:</label>
+          <textarea name="comentario" id="" cols="30" rows="10"></textarea>
+        
+          <button type="button" onclick="validateForm()">Enviar</button>
+        </form>
       </div>
     </section>
     <!-- FIN MODAL -->
@@ -97,7 +113,7 @@
               Desde rinoplastias elegantes hasta reconstrucciones que inspiran.
               Descubre cómo podemos ayudarte a alcanzar tus metas estéticas.
             </p>
-            <a id="btn_servicios" href="#">Explorar Servicios</a>
+            <a id="btn_servicios" href="#servicios">Explorar Servicios</a>
           </div>
         </li>
         <li>
@@ -106,13 +122,11 @@
             alt="medico-marcando-cara-pacientes-femeninos-tratamiento-cosmetico"
           />
           <div class="caption">
-            <h1>Expert Financial Advice</h1>
+            <h1>Experiencia Personalizada</h1>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima et
-              labore magni veritatis, amet eligendi ut facilis voluptatem eos
-              at.
+              En AesthetiCraft, entendemos que eres único. Nuestros cirujanos plásticos altamente calificados te ofrecen consultas personalizadas para discutir tus metas y opciones. Comienza tu viaje hacia una nueva versión de ti mismo hoy
             </p>
-            <a id="abrirbtn" href="#">Learn More</a>
+            <a href="#contactanos">Programar Consulta</a>
           </div>
         </li>
         <li>
@@ -121,13 +135,11 @@
             alt="mujer-cara-marcada-recibiendo-inyeccion-botox"
           />
           <div class="caption">
-            <h1>Expert Financial Advice</h1>
+            <h1>Transformaciones Impactantes</h1>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima et
-              labore magni veritatis, amet eligendi ut facilis voluptatem eos
-              at.
+              Explora historias de transformación impactantes y testimonios de pacientes que han experimentado la magia de AesthetiCraft. ¿Estás listo para escribir tu propia historia de transformación?
             </p>
-            <a id="abrirbtn" href="#">Learn More</a>
+            <a id="abrirbtn" href="#testimonios">Leer Testimonios</a>
           </div>
         </li>
       </ul>
@@ -147,7 +159,7 @@
       </svg>
     </div>
     <!-- CARRUSEL -->
-    <section class="fondo_servicios">
+    <section id="servicios" class="fondo_servicios">
       <section id="last" class="contenedor_servicios ancho">
         <article class="our_team">
           <h1>Servicios</h1>
@@ -245,15 +257,17 @@
     </section>
     <!-- FIN CARRUSEL -->
     <!-- PARALLAX -->
-    <section class="contenedor_parallax">
-      <figure>
-        <img class="img_blur" src="imagenes_comp/parallax1.jpg" alt="" />
-        <div class="doctor">
-          <h2>Galeria</h2>
-          <img class="img_doctor" src="imagenes_comp/doctor_blur.png" alt="" />
-        </div>
-      </figure>
-    </section>
+    <section id="galeria" class="contenedor_parallax">
+      <div class="doctor"></div>
+      <div class="contenido ancho">
+        <h2>Galeria</h2>
+          <img
+            class="img_doctor"
+            src="imagenes_comp/doctor_blur.png"
+            alt=""
+          />
+      </div>
+  </section>
     <!-- FIN PARALLAX -->
     <!-- LIGHTBOX -->
     <section class="contenedor_seccion ancho">
@@ -377,28 +391,22 @@
     </section>
     <!-- FIN LIGHTBOX -->
     <!-- PARALLAX -->
-    <section class="contenedor_parallax">
-      <figure>
-        <img
-          class="img_blur"
-          src="imagenes_comp/esteticista-haciendo-relleno-inyeccion-clienta.jpg"
-          alt=""
-        />
-        <div class="doctor">
-          <h2>Testimonios</h2>
+    <section id="testimonios" class="contenedor_parallax2">
+      <div class="doctor"></div>
+      <div class="contenido ancho">
+        <h2>Testimonios</h2>
           <img
             class="img_doctor"
             src="imagenes_comp/cirugia-estetica-facial.png"
             alt=""
           />
-        </div>
-      </figure>
-    </section>
+      </div>
+  </section>
     <!-- FIN PARALLAX -->
     <!-- TESTIMONIOS -->
     <section class="fondo_servicios">
       <section class="contenedor_testimonios ancho">
-        <article class="testimonios">
+        <article class="wow animate__animated animate__bounce testimonios">
           <i class="fa-solid fa-user"></i>
           <h1>María G.</h1>
           <h2>Transformación Después de la Maternidad</h2>
@@ -411,7 +419,7 @@
             profundamente."
           </p>
         </article>
-        <article class="testimonios">
+        <article class="wow animate__animated animate__headShake testimonios">
           <i class="fa-solid fa-user"></i>
           <h1>Juan M.</h1>
           <h2>Reconstrucción Después de un Accidente</h2>
@@ -423,7 +431,7 @@
             es incomparable. ¡Gracias por devolverme la vida!"
           </p>
         </article>
-        <article class="testimonios">
+        <article class="wow animate__animated animate__fadeInRight testimonios">
           <i class="fa-solid fa-user"></i>
           <h1>Laura S.</h1>
           <h2>Cambio de Vida con un Lifting Facial</h2>
@@ -438,6 +446,193 @@
       </section>
     </section>
     <!-- FIN TESTIMONIOS -->
+    <!-- FAQ -->
+    <section id="faq" class="contenedor_parallax3">
+        <div class="doctor"></div>
+        <div class="contenido ancho">
+          <h2>FAQ</h2>
+            <img
+              class="img_doctor"
+              src="imagenes_comp/cirugia-estetica-facial.png"
+              alt=""
+            />
+        </div>
+    </section>
+    <!-- FIN PARALLAX -->
+    <section class="fondo_servicios">
+      <section class="cont_acordeon ancho">
+        <div class="acordeones">
+          <div id="acordeon1" class="titulo_rotar">
+            <h3>
+              ¿Cuáles son los riesgos y complicaciones asociados con este
+              procedimiento?
+            </h3>
+            <div id="iconos" class="icono">
+              <i id="plus" class="fa-solid fa-circle-plus"></i>
+              <i id="minus" class="fa-solid fa-square-minus"></i>
+            </div>
+          </div>
+          <article id="mostrar1" class="mostrar">
+            <p>
+              Los riesgos y complicaciones pueden variar según el procedimiento,
+              pero comúnmente incluyen infección, hematomas, reacciones adversas
+              a la anestesia y resultados insatisfactorios. Nuestros cirujanos
+              discutirán estos riesgos contigo durante la consulta.
+            </p>
+          </article>
+          <div id="acordeon2" class="titulo_rotar">
+            <h3>¿Cuál es el tiempo de recuperación esperado?</h3>
+            <div id="iconos" class="icono">
+              <i id="plus" class="fa-solid fa-circle-plus"></i>
+              <i id="minus" class="fa-solid fa-square-minus"></i>
+            </div>
+          </div>
+          <article id="mostrar1" class="mostrar">
+            <p>
+              El tiempo de recuperación varía según la cirugía. Por ejemplo, la
+              recuperación de una rinoplastia puede ser más corta que la de una
+              abdominoplastia. Generalmente, puedes esperar ver resultados
+              definitivos después de unas semanas a meses.
+            </p>
+          </article>
+          <div id="acordeon3" class="titulo_rotar">
+            <h3>¿Cómo puedo prepararme física y emocionalmente para la cirugía?</h3>
+            <div id="iconos" class="icono">
+              <i id="plus" class="fa-solid fa-circle-plus"></i>
+              <i id="minus" class="fa-solid fa-square-minus"></i>
+            </div>
+          </div>
+          <article id="mostrar1" class="mostrar">
+            <p>
+              Te proporcionaremos pautas detalladas sobre la preparación preoperatoria, que incluirán exámenes médicos, ajustes en medicamentos y recursos para el apoyo emocional.
+            </p>
+          </article>
+          <div id="acordeon4" class="titulo_rotar">
+            <h3>¿Cuánto tiempo lleva ver los resultados finales?</h3>
+            <div id="iconos" class="icono">
+              <i id="plus" class="fa-solid fa-circle-plus"></i>
+              <i id="minus" class="fa-solid fa-square-minus"></i>
+            </div>
+          </div>
+          <article id="mostrar1" class="mostrar">
+            <p>El tiempo para ver resultados definitivos varía según el procedimiento. Durante tu consulta, te proporcionaremos una estimación del tiempo de recuperación y cuándo puedes esperar ver los resultados finales.</p>
+            
+          </article>
+          <div id="acordeon5" class="titulo_rotar">
+            <h3>¿Hay requisitos de edad o salud específicos para este procedimiento?</h3>
+            <div id="iconos" class="icono">
+              <i id="plus" class="fa-solid fa-circle-plus"></i>
+              <i id="minus" class="fa-solid fa-square-minus"></i>
+            </div>
+          </div>
+          <article id="mostrar1" class="mostrar">
+            <p>La elegibilidad varía según el procedimiento. Durante tu consulta, nuestros profesionales evaluarán tu salud y discutirán cualquier requisito específico.</p>
+            
+          </article>
+          <div id="acordeon6" class="titulo_rotar">
+            <h3>¿Cuáles son los posibles efectos secundarios o complicaciones?</h3>
+            <div id="iconos" class="icono">
+              <i id="plus" class="fa-solid fa-circle-plus"></i>
+              <i id="minus" class="fa-solid fa-square-minus"></i>
+            </div>
+          </div>
+          <article id="mostrar1" class="mostrar">
+            <p>Hablaremos abiertamente sobre los posibles efectos secundarios y complicaciones asociadas con el procedimiento. Nuestra prioridad es tu seguridad, y tomaremos medidas para minimizar cualquier riesgo.</p>
+          </article>
+          <div id="acordeon7" class="titulo_rotar">
+            <h3>¿Cuál es el historial de éxito de su práctica con este procedimiento?</h3>
+            <div id="iconos" class="icono">
+              <i id="plus" class="fa-solid fa-circle-plus"></i>
+              <i id="minus" class="fa-solid fa-square-minus"></i>
+            </div>
+          </div>
+          <article id="mostrar1" class="mostrar">
+            <p>Estamos orgullosos de nuestro historial de éxito y estamos dispuestos a compartir estadísticas y experiencias anteriores relacionadas con el procedimiento que estás considerando.</p>
+          </article>
+          <div id="acordeon8" class="titulo_rotar">
+            <h3>¿Cuáles son los costos totales y hay opciones de financiamiento?</h3>
+            <div id="iconos" class="icono">
+              <i id="plus" class="fa-solid fa-circle-plus"></i>
+              <i id="minus" class="fa-solid fa-square-minus"></i>
+            </div>
+          </div>
+          <article id="mostrar1" class="mostrar">
+            <p>Te proporcionaremos un desglose detallado de los costos, que incluirá los honorarios del cirujano, el costo del quirófano y otros gastos asociados. También discutiremos opciones de financiamiento disponibles.</p>
+          </article>
+          <div id="acordeon9" class="titulo_rotar">
+            <h3>¿Qué tipo de seguimiento y atención postoperatoria se proporciona?</h3>
+            <div id="iconos" class="icono">
+              <i id="plus" class="fa-solid fa-circle-plus"></i>
+              <i id="minus" class="fa-solid fa-square-minus"></i>
+            </div>
+          </div>
+          <article id="mostrar1" class="mostrar">
+            <p>Ofrecemos un plan de seguimiento completo que incluye consultas y atención postoperatoria para garantizar una recuperación y resultados exitosos.</p>
+          </article>
+        </div>
+        </div>
+      </section>
+      <article class="video_responsive ancho">
+        <div class="contenedor_video">
+          <iframe src="https://www.youtube.com/embed/ZWMQhwUGMtM?si=eTCcbRyE4Fu4R3nf" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+      </article>
+      
+    </section>
+    <!-- FIN FAQ -->
+    <!-- CONTACTANOS -->
+    <section id="contactanos" class="contenedor_parallax">
+        <div class="doctor"></div>
+        <div class="contenido ancho">
+          <h2>Contáctanos</h2>
+            <img
+              class="img_doctor"
+              src="imagenes_comp/cirugia-estetica-facial.png"
+              alt=""
+            />
+        </div>
+    </section>
+    <section class="fondo_contactos"> 
+      <div class="doctor"></div>
+    <section class="contenedor_contactanos ancho">
+      <form id="myForm">
+        <label for="firstName">Nombre:</label>
+        <input type="text" id="firstName" name="firstName" required>
+      
+        <label for="lastName">Apellido:</label>
+        <input type="text" id="lastName" name="lastName" required>
+      
+        <label for="email">Correo Electrónico:</label>
+        <input type="email" id="email" name="email" required>
+        <label for="comentary">Razón:</label>
+        <textarea name="comentario" id="" cols="30" rows="10"></textarea>
+      
+        <button type="button" onclick="validateForm()">Enviar</button>
+      </form>
+    </section>
+  </section>
+
+    <!-- FIN CONTACTANOS -->
+    <footer>
+      <section class="logo_red ancho">
+        <figure class="logo_footer">
+          <img src="images/plastic-surgery.png" alt="" />
+          <h2>AesthetiCraft</h2>
+        </figure>
+        <div class="redes">
+          <h2>Redes sociales: </h2>
+          <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+          <a href="#"><i class="fa-brands fa-instagram"></i></a>
+        </div>
+      </section>
+      <article class="ancho">
+        <h2>© 2023 All Rights Reserved. Terms of Use and Privacy Policy</h2>
+      </article>
+      <div class="arrow-inicio">
+        <i class="fa-solid fa-arrow-up" id="arrow-up"><a href="#"></a></i>
+      </div>
+    </footer>
     <!-- FUNCIONES JS -->
     <script>
       $("#iconomenu").click(function () {
@@ -479,5 +674,62 @@
       Fancybox.bind('[data-fancybox="gallery"]', {});
     </script>
     <!-- FIN FANCYBOX -->
+    <!-- ANIMACIONES -->
+    <script>
+      new WOW().init();
+    </script>
+    <!-- FIN ANIMACIONES -->
+    <!-- ACORDEON -->
+    <script>
+      $(document).ready(function () {
+        $(".titulo_rotar").click(function () {
+          var mas = $(this).find(".fa-circle-plus");
+          var menos = $(this).find(".fa-square-minus");
+          var titulo = $(this).find("h3");
+          var contenido = $(this).next(".mostrar");
+
+          // Cerrar acordeones abiertos
+          $(".mostrar").not(contenido).slideUp();
+          $(".fa-square-minus").not(menos).hide();
+          $(".fa-circle-plus").not(mas).show();
+          $(".color-titulo").removeClass("color-titulo");
+
+          // Abrir/acordeón actual
+          contenido.slideToggle();
+          mas.toggle();
+          menos.toggle();
+          titulo.toggleClass("color-titulo");
+        });
+      });
+    </script>
+    <!-- FIN ACORDEON -->
+    <!-- FORMULARIO -->
+    <script>
+      function validateForm() {
+        var firstName = document.getElementById('firstName').value;
+        var lastName = document.getElementById('lastName').value;
+        var email = document.getElementById('email').value;
+    
+        if (firstName === '' || lastName === '' || email === '') {
+          alert('Por favor, complete todos los campos.');
+        } else {
+          alert('Formulario enviado con éxito!');
+          document.getElementById('myForm').reset();
+        }
+      }
+    </script>
+<!-- FIN FORMULARIO     -->
+<!-- ARROWUP -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    var arrowUp = document.getElementById('arrow-up');
+
+    arrowUp.addEventListener('click', function() {
+      // Utiliza el método scrollIntoView para desplazarte al elemento con el id "inicio"
+      document.getElementById('inicio').scrollIntoView({ behavior: 'smooth' });
+    });
+  });
+</script>
+<!-- FIN ARROWUP -->
   </body>
 </html>

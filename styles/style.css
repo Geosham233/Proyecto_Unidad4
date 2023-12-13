@@ -23,6 +23,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  scroll-behavior: smooth;
 }
 /* Estilos generales del cuerpo del documento */
 body {
@@ -112,19 +113,19 @@ nav ul li a:hover {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 400px;
+  width: 500px;
   padding: 15px 20px 30px 20px;
+  position: relative;
 }
-.imgmodal1 {
-  width: 300px;
-}
-.imgmodal2 {
-  width: 300px;
+.imgmodal {
+  width: 100px;
 }
 .fa-circle-xmark {
-  color: #fff;
-  border: 1px red solid;
-  background-color: red;
+  color: var(--ColorCom);
+  position: absolute;
+  top: -5%;
+  left: 94%;
+  font-size: 30px;
 }
 .contenidomodal p {
   color: #fff;
@@ -195,6 +196,8 @@ nav ul li a:hover {
   padding: 20px;
   border: 5px #fff dotted;
   background-color: var(--ColorBasetrans);
+  backdrop-filter: blur(0.4rem);
+  -webkit-backdrop-filter: blur(0.4rem);
   border-radius: 3px;
 }
 .caption h1 {
@@ -273,33 +276,67 @@ nav ul li a:hover {
   position: relative;
   width: 100%;
   height: 350px;
-  overflow: hidden;
+  background-image: url(../imagenes_comp/parallax1.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 0px -20px;
+  background-attachment: fixed;
 }
-.img_blur {
-  width: 100%;
-  height: 100%;
-  filter: blur(3px);
-  object-fit: cover;
+
+.contenedor_parallax2 {
   position: relative;
-  z-index: 15;
+  width: 100%;
+  height: 350px;
+  background-image: url(../imagenes_comp/parallax2.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 0px -20px;
+  background-attachment: fixed;
 }
-.img_doctor {
-  width: 300px;
+.contenedor_parallax3 {
+  position: relative;
+  width: 100%;
+  height: 350px;
+  background-image: url(../imagenes_comp/parallax3.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 0px -20px;
+  background-attachment: fixed;
 }
-.doctor {
+
+.contenido {
   position: absolute;
-  z-index: 100;
-  left: 50%;
+  z-index: 3;
   top: 50%;
+  left: 50%;
   transform: translate(-50%, -50%);
-  border: 1px red solid;
   display: flex;
   flex-direction: row;
   justify-content: center;
-  gap: 550px;
   align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
 }
-.doctor h2 {
+.img_doctor {
+  width: 220px;
+  filter: grayscale(1);
+  transition: all 0.5s;
+}
+.img_doctor:hover {
+  filter: grayscale(0);
+}
+.doctor {
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--ColorBasetrans);
+  backdrop-filter: blur(0.4rem);
+  -webkit-backdrop-filter: blur(0.4rem);
+}
+.contenido h2 {
   font-size: 55px;
   color: #fff;
   font-weight: var(--Bold);
@@ -371,4 +408,206 @@ nav ul li a:hover {
   line-height: 23px;
   color: var(--ColorSec);
   padding: 10px 0px;
+}
+/* ACORDEON */
+.cont_acordeon {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 30px 0px;
+}
+.acordeones {
+  width: 100%;
+  text-align: center;
+}
+
+.titulo_rotar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: var(--Verde);
+  margin: 10px 0px;
+}
+.titulo_rotar h3 {
+  color: var(--ColorBase);
+}
+.color-titulo {
+  transition: all 0.5s;
+}
+.icono {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  color: var(--ColorBase);
+  padding-right: 30px;
+}
+.acordeones h1 {
+  padding-bottom: 30px;
+}
+
+#minus {
+  display: none;
+  transition: all 0.5s;
+}
+.mostrar {
+  padding: 10px;
+  display: none;
+  text-align: center;
+}
+.mostrar h2 {
+  color: #fff;
+  /* margin: 20px 0px; */
+}
+.rotar {
+  transition: all 1s;
+  transform: rotate(180deg);
+}
+/* FIN ACORDEON */
+/* VIDEO RESPONSIVE */
+.video_responsive {
+  max-width: 1200px;
+}
+.contenedor_video {
+  height: 0;
+  overflow: hidden;
+  padding-bottom: 56.25%;
+  position: relative;
+}
+.contenedor_video iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+/* FORMULARIO */
+form {
+  width: 80%;
+  margin: auto;
+  padding: 30px;
+}
+.contenedor_contactanos {
+  width: 100%;
+  position: absolute;
+  z-index: 3;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 42px;
+}
+label {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--ColorCom);
+  font-size: 20px;
+}
+
+input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 16px;
+  border-radius: 5px;
+  border: 1px #ffffff8e solid;
+  background-color: #ffffff8e;
+  backdrop-filter: blur(0.4rem);
+  -webkit-backdrop-filter: blur(0.4rem);
+}
+textarea {
+  width: 100%;
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px #ffffff8e solid;
+  background-color: #ffffff8e;
+  backdrop-filter: blur(0.4rem);
+  -webkit-backdrop-filter: blur(0.4rem);
+}
+
+button {
+  background-color: var(--ColorCom);
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: var(--ColorBase);
+}
+.fondo_contactos {
+  position: relative;
+  width: 100%;
+  height: 600px;
+  background-image: url(../imagenes_comp/parallax4.jpg);
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+/* FOOTER */
+footer {
+  background-color: var(--ColorBase);
+  position: relative;
+}
+.logo_footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  padding: 20px 0px;
+}
+.logo_footer h2 {
+  color: #fff;
+}
+footer article {
+  text-align: center;
+  color: #fff;
+}
+.logo_red {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.redes {
+  display: flex;
+  gap: 20px;
+}
+.redes h2 {
+  color: #fff;
+}
+.redes a {
+  color: #fff;
+  text-decoration: none;
+}
+.redes a i {
+  font-size: 20px;
+}
+.redes a i:hover {
+  color: var(--ColorCom);
+}
+.arrow-inicio {
+  position: fixed;
+  top: 90%;
+  left: 90%;
+  z-index: 101;
+}
+.arrow-inicio i {
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  padding: 10px;
+  text-align: center;
+  color: #fff;
+  background-color: var(--ColorCom);
 }

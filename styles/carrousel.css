@@ -15,10 +15,9 @@
   justify-content: flex-start;
   align-items: stretch;
   gap: 10px;
-  color: #000;
+  color: #fff;
   -webkit-overflow-scrolling: touch;
   scroll-behavior: smooth;
-  border: 3px black solid;
 }
 .slide {
   padding: 20px;
@@ -26,6 +25,13 @@
   position: relative;
   min-width: 33.33%;
   text-align: center;
+  border: 1px red solid;
+  background-color: var(--ColorBasetrans);
+}
+.slide ul li {
+  padding: 5px 10px;
+  list-style: none;
+  text-align: left;
 }
 /* contenedor botones */
 .slide-buttons {
@@ -33,6 +39,7 @@
   justify-content: center;
   align-items: center;
   padding: 10px;
+  gap: 20px;
 }
 /* contenedor indicadores */
 .slide-indicators {
@@ -62,8 +69,8 @@
 }
 /* flechas */
 .arrow {
-  border: 1px black solid;
-  color: black;
+  color: var(--ColorBase);
+  background-color: var(--ColorCom);
   text-decoration: none;
   cursor: pointer;
   padding: 10px;
