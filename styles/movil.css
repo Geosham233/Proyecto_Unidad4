@@ -29,4 +29,15 @@
   .caption p {
     font-size: 15px;
   }
+  /* PARALLAX */
+  .img_doctor {
+    width: 100px;
+  }
+  .doctor {
+    gap: 10px;
+  }
+  .doctor h2 {
+    font-size: 35px;
+  }
+  /* FIN PARALLAX */
 }

@@ -257,10 +257,51 @@ nav ul li a:hover {
 }
 
 /* CARRUSEL */
+.slide-buttons {
+  padding-bottom: 30px;
+}
 .slide figure img {
   width: 100%;
 }
 .slide h1 {
   font-size: 35px;
   line-height: 43px;
+}
+/* fin carrusel */
+/* parallax */
+.contenedor_parallax {
+  position: relative;
+  width: 100%;
+  height: 350px;
+  overflow: hidden;
+}
+.img_blur {
+  width: 100%;
+  height: 100%;
+  filter: blur(3px);
+  object-fit: cover;
+  position: relative;
+  z-index: 15;
+}
+.img_doctor {
+  width: 300px;
+}
+.doctor {
+  position: absolute;
+  z-index: 100;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border: 1px red solid;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 400px;
+  align-items: center;
+}
+.doctor h2 {
+  font-size: 55px;
+  color: #fff;
+  font-weight: var(--Bold);
 }
