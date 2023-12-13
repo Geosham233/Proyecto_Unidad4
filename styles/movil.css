@@ -54,7 +54,10 @@
     align-items: center;
   }
   .logo_red {
-    flex-wrap: wrap;
+    flex-direction: column;
+  }
+  .redes {
+    padding-bottom: 10px;
   }
   .redes h2 {
     font-size: 15px;
