@@ -13,7 +13,7 @@
     flex-direction: column;
     flex-wrap: wrap;
   }
-  .icono_menu {
+  #iconomenu {
     display: flex;
   }
   .caption {

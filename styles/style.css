@@ -65,7 +65,7 @@ header {
   font-size: 30px;
   cursor: pointer;
 }
-.icono_menu {
+#iconomenu {
   display: none;
 }
 nav ul {
